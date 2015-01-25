@@ -18,13 +18,20 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="webApp">
+  <body ng-app="webApp" ng-controller="MainCtrl">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container"ng-controller="MainCtrl">
+
+    <div class="jumbotron">
+      <button class="btn btn-primary pull-right" ng-click="add()">
+        <i class="fa fa-plus"></i> Add book
+      </button>
+      <h1>My Bookshelf</h1>
+    </div>
+    <div class="container">
       <div ui-view></div>
     </div>
 
